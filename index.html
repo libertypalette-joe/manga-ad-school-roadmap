@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫画広告動画制作の簡易ロードマップ｜無料視聴ページ</title>
+    
+    <!-- Google Fonts: 視認性の高いNoto Sans JPを使用 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#10b981', // ベースの緑
+                            600: '#059669', // メインの緑（信頼感）
+                            700: '#047857',
+                        },
+                        accent: {
+                            400: '#fbbf24',
+                            500: '#f59e0b', // CTA用の黄色
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* カスタムCSS: テキストの読みやすさ向上 */
+        body {
+            color: #334155; /* slate-700 */
+            line-height: 1.8;
+            word-break: auto-phrase; /* ブラウザによって自然な改行を促す */
+        }
+        
+        /* 動画埋め込み用の16:9コンテナ */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            background-color: #1e293b; /* slate-800 */
+            border-radius: 0.75rem; /* rounded-xl */
+        }
+        .video-container iframe,
+        .video-container .placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ふわっと浮かび上がるアニメーション用（簡素なもの） */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 antialiased font-sans">
+
+    <!-- 1. ヘッダー -->
+    <!-- ブランド名やロゴを配置するシンプルなヘッダー -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <!-- ヘッダーとしての自然な左寄せ位置にするため、コンテナ幅を広げて適切な余白（px-4/sm:px-6/lg:px-8）を持たせる -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-start">
+            <span class="text-brand-600 font-bold text-xs sm:text-sm tracking-wide leading-tight">
+                未経験から学ぶ！AI×動画編集でつくる漫画広告動画入門コース
+            </span>
+        </div>
+    </header>
+
+    <!-- 2. ファーストビュー -->
+    <section class="bg-brand-50 pt-12 pb-16 px-4 relative overflow-hidden">
+        <!-- 背景の装飾円 -->
+        <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-brand-100 opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 rounded-full bg-brand-100 opacity-50 blur-3xl"></div>
+
+        <div class="max-w-3xl mx-auto text-center relative z-10 animate-fade-in">
+            <!-- 視聴ページとして自然な表現に変更 -->
+            <p class="text-brand-600 font-bold text-sm sm:text-base mb-3 tracking-wider flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                まずはここから！無料視聴コンテンツ
+            </p>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-800 leading-tight mb-6">
+                漫画広告動画制作の簡易ロードマップ<br class="hidden sm:block">
+                <span class="inline-block mt-2 px-3 py-1 bg-brand-600 text-white text-lg sm:text-2xl rounded-full">無料視聴ページ</span>
+            </h1>
+            
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm text-left max-w-2xl mx-auto border border-brand-100 mb-8 text-sm sm:text-base">
+                <p class="mb-4 font-medium text-slate-700">
+                    このページでは、漫画広告動画制作の全体像や学習の進め方、必要ツールについて無料で確認できます。
+                </p>
+                <p class="mb-4">
+                    このコースに興味はあるけれど、まずはどんな内容なのかを知りたい方に向けて、まず最初に<strong class="text-brand-600">全体の地図をつかんでもらうためのページ</strong>です。
+            </div>
+
+            <!-- スクロール誘導 -->
+            <a href="#lectures" class="inline-flex flex-col items-center justify-center text-brand-600 hover:text-brand-700 transition-colors">
+                <span class="text-sm font-bold mb-2">無料視聴レクチャーへ</span>
+                <!-- 下矢印アイコン -->
+                <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- 3. この無料視聴でわかること -->
+    <section class="py-12 sm:py-16 px-4 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-xl sm:text-2xl font-bold text-center mb-8 flex items-center justify-center gap-2">
+                <svg class="w-6 h-6 text-brand-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                この無料視聴でわかること
+            </h2>
+            
+            <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-100">
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-sm sm:text-base">漫画広告動画制作で、まず何を学べばいいのか</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-sm sm:text-base">どんな順番でスキルを身につけていくのか</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-sm sm:text-base">学習を進めるうえで必要なツール</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-sm sm:text-base">このコースが目指していること</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-sm sm:text-base">どんな講師が教えているのか</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 無料視聴レクチャー一覧 -->
+    <section id="lectures" class="py-12 sm:py-16 px-4">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="inline-block text-2xl sm:text-3xl font-black text-brand-700 border-b-4 border-brand-200 pb-2">
+                    無料視聴レクチャー
+                </h2>
+            </div>
+
+            <div class="space-y-10 sm:space-y-14">
+                
+                <!-- レクチャー1 -->
+                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-brand-600 text-white font-bold text-sm sm:text-base px-3 py-1 rounded-lg shrink-0">1</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-800 leading-tight">はじめに</h3>
+                        </div>
+                        <p class="text-sm sm:text-base text-slate-600 mb-6">
+                            まず最初に、このコースの考え方や学び方の方向性を確認できます。
+                        </p>
+                        
+                        <!-- ▽▽▽ 動画埋め込み (レクチャー1) ▽▽▽ -->
+                        <div class="video-container shadow-inner">
+                            <iframe src="https://player.vimeo.com/video/1137169121?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="1_はじめに"></iframe>
+                        </div>
+                        <!-- △△△ 動画埋め込み (レクチャー1) △△△ -->
+                    </div>
+                </article>
+
+                <!-- レクチャー2 -->
+                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-brand-600 text-white font-bold text-sm sm:text-base px-3 py-1 rounded-lg shrink-0">2</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-800 leading-tight">このコースで身につくスキル</h3>
+                        </div>
+                        <p class="text-sm sm:text-base text-slate-600 mb-6">
+                            このコースを通して、どんなことができるようになるのかを確認できます。
+                        </p>
+                        
+                        <!-- ▽▽▽ 動画埋め込み (レクチャー2) ▽▽▽ -->
+                        <div class="video-container shadow-inner">
+                            <iframe src="https://player.vimeo.com/video/1137184619?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="2_本コースで身につくスキル"></iframe>
+                        </div>
+                        <!-- △△△ 動画埋め込み (レクチャー2) △△△ -->
+                    </div>
+                </article>
+
+                <!-- レクチャー3 -->
+                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-brand-600 text-white font-bold text-sm sm:text-base px-3 py-1 rounded-lg shrink-0">3</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-800 leading-tight">本コースの全体像</h3>
+                        </div>
+                        <p class="text-sm sm:text-base text-slate-600 mb-6">
+                            学習がどんな順番で進んでいくのか、全体の流れを確認できます。
+                        </p>
+                        
+                        <!-- ▽▽▽ 動画埋め込み (レクチャー3) ▽▽▽ -->
+                        <div class="video-container shadow-inner">
+                            <iframe src="https://player.vimeo.com/video/1137185750?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="3_本コースの全体像"></iframe>
+                        </div>
+                        <!-- △△△ 動画埋め込み (レクチャー3) △△△ -->
+                    </div>
+                </article>
+
+                <!-- レクチャー4 -->
+                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-brand-600 text-white font-bold text-sm sm:text-base px-3 py-1 rounded-lg shrink-0">4</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-800 leading-tight">本コースの必要ツール</h3>
+                        </div>
+                        <p class="text-sm sm:text-base text-slate-600 mb-6">
+                            受講前に必要なツールや、準備しておきたいものを確認できます。
+                        </p>
+                        
+                        <!-- ▽▽▽ 動画埋め込み (レクチャー4) ▽▽▽ -->
+                        <div class="video-container shadow-inner">
+                            <iframe src="https://player.vimeo.com/video/1137189096?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="4_本コースの必要ツール"></iframe>
+                        </div>
+                        <!-- △△△ 動画埋め込み (レクチャー4) △△△ -->
+                    </div>
+                </article>
+
+                <!-- レクチャー5 -->
+                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-brand-600 text-white font-bold text-sm sm:text-base px-3 py-1 rounded-lg shrink-0">5</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-800 leading-tight">講師紹介</h3>
+                        </div>
+                        <p class="text-sm sm:text-base text-slate-600 mb-6">
+                            講師のJoeが、どんな経歴をもとにこのコースを作っているのかをお話ししています。どんな人が教えているのかを知りたい方は、最後にこちらもご覧ください。
+                        </p>
+                        
+                        <!-- ▽▽▽ 動画埋め込み (レクチャー5) ▽▽▽ -->
+                        <div class="video-container shadow-inner">
+                            <iframe src="https://player.vimeo.com/video/1137189379?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="5_講師紹介"></iframe>
+                        </div>
+                        <!-- △△△ 動画埋め込み (レクチャー5) △△△ -->
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 視聴後の案内 -->
+    <section class="py-12 px-4 bg-white">
+        <div class="max-w-2xl mx-auto text-center border-t border-slate-200 pt-12">
+            <p class="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
+                ここまでご覧いただきありがとうございます。<br><br>
+                この無料視聴ページでは、漫画広告動画制作を学ぶための<br class="hidden sm:block">
+                全体像・学習の順番・使用ツールをつかめるようにまとめています。<br><br>
+                本コースではこの先、各工程をさらに詳しく学びながら、<br class="hidden sm:block">
+                実際に手を動かして作品制作まで進めていきます。
+            </p>
+        </div>
+    </section>
+
+    <!-- 6. CTAセクション -->
+    <section class="py-16 px-4 bg-brand-50 border-t border-brand-100">
+        <div class="max-w-3xl mx-auto text-center bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-brand-100 relative overflow-hidden">
+            <!-- ちょっとした装飾 -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-accent-400 opacity-10 rounded-bl-full"></div>
+            
+            <!-- 見出しを少し柔らかく変更 -->
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-800 mb-6 relative z-10">
+                本講座でさらに深く学びたい方へ
+            </h2>
+            
+            <p class="text-sm sm:text-base text-slate-600 mb-8 relative z-10">
+                「未経験から学ぶ！AI×動画編集でつくる漫画広告動画入門コース」では、<br class="hidden sm:block">
+                漫画広告動画を企画から完成まで一貫して学べるカリキュラムを用意しています。<br>
+                ご興味のある方は、ぜひ販売ページで詳細をご確認ください。
+            </p>
+
+            <!-- ▽▽▽ CTAボタン ▽▽▽ -->
+            <!-- 影を弱め、テキストの圧を少し抑えて自然に押せる温度感に調整 -->
+            <a href="https://libertypalette-joe.github.io/manga-ad-school-lp/" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold text-lg rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 relative z-10">
+                本講座の詳細を見る
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+            <!-- △△△ CTAボタン △△△ -->
+        </div>
+    </section>
+
+    <!-- 7. フッターに近い補足 & フッター -->
+    <footer class="bg-slate-800 text-slate-300 py-12 px-4">
+        <div class="max-w-3xl mx-auto">
+            <!-- 枠のサイズをテキストに合わせ（max-w-fit）、中央に配置（mx-auto text-center） -->
+            <div class="bg-slate-700/50 py-3 px-6 rounded-xl text-xs sm:text-sm mb-8 border border-slate-600 max-w-fit mx-auto text-center">
+                <p>※このページは、漫画広告動画制作の全体像をつかむための無料視聴ページです。</p>
+            </div>
+            
+            <div class="text-center text-xs text-slate-500 mt-8">
+                &copy; 2026 リバティー・パレット All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
